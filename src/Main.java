@@ -1,11 +1,21 @@
 public class Main {
   public static void main(String[] args) {
-    // Создайте класс Triangle (треугольник), принимающий три целых значения - длины трёх сторон треугольника.
-    // В конструкторе нужно проверить введённые значения на корректность
-    // (например, длины не могут быть отрицательными).
-    // В классе должен быть описан отдельный статический метод public static bool checkSides(int a, int b, int c),
-    // который должен проверить неравенство треугольника.
     // Этот метод необходимо использовать в конструкторе.
     // При провале любой из проверок нужно вывести на экран соответствующее сообщение.
+
+    Triangle triangle = new Triangle(5, 7,10);
+    System.out.printf(triangle.stringToPrint());
+    System.out.println();
+
+    Triangle triangleNegative = new Triangle(3, -8, 0);
+    System.out.printf(triangleNegative.stringToPrint());
+    System.out.println();
+
+    Triangle triangleSameSides = new Triangle(3,5,3);
+    System.out.printf(triangleSameSides.stringToPrint());
+    System.out.println();
+
+
   }
+
 }
