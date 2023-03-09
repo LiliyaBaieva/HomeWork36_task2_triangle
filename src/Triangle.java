@@ -21,6 +21,16 @@ public class Triangle {
 
   }
 
+  // В классе должен быть описан отдельный статический метод public static bool checkSides(int a, int b, int c),
+  // который должен проверить неравенство треугольника.
+  public static boolean checkSides(int sideA, int sideB, int sideC){
+    if(sideA == sideB || sideA == sideC || sideB == sideC){
+      System.out.println("The triangle can not have the same sides.");
+      return false;
+    }
+    return true;
+  }
+
   public int getSideA(){
     return sideA;
   }
@@ -31,8 +41,14 @@ public class Triangle {
     return sideC;
   }
 
-  public String stringToPrint(){
+  public String stringToPrint(){    // to test what we have to print
     return String.format("The triangle has side A = %d, side B = %d, side C = %d%n", sideA,sideB,sideC);
-  } // to test what we have to print
+  }
+
+
+
+
+
+
 
 }
