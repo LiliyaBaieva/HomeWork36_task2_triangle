@@ -21,6 +21,18 @@ public class Triangle {
 
   }
 
+  public int getSideA(){
+    return sideA;
+  }
+  public int getSideB(){
+    return sideB;
+  }
+  public int getSideC(){
+    return sideC;
+  }
 
+  public String stringToPrint(){
+    return String.format("The triangle has side A = %d, side B = %d, side C = %d%n", sideA,sideB,sideC);
+  } // to test what we have to print
 
 }
