@@ -11,6 +11,8 @@ public class Triangle {
     try{
       if(sideA <= 0 || sideB <= 0 || sideC <= 0){
         System.out.println("The length of side can not be negative.");
+      } else if (!checkSides(sideA, sideB,sideC)) {
+        System.out.println("The triangle can not have the same sides.");
       }
       this.sideA = sideA;
       this.sideB = sideB;
@@ -18,14 +20,13 @@ public class Triangle {
     } catch (NumberFormatException e){
       System.out.println("Incorrect number entry: " + e.getMessage());
     }
-
   }
 
   // В классе должен быть описан отдельный статический метод public static bool checkSides(int a, int b, int c),
   // который должен проверить неравенство треугольника.
   public static boolean checkSides(int sideA, int sideB, int sideC){
     if(sideA == sideB || sideA == sideC || sideB == sideC){
-      System.out.println("The triangle can not have the same sides.");
+//      System.out.println("The triangle can not have the same sides.");
       return false;
     }
     return true;
